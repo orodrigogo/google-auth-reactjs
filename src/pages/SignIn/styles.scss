@@ -9,16 +9,45 @@
   align-items: center;
   justify-content: center;
 
-  >p {
-    margin-top: 16px;
-    color: #8d8d99;
+  span {
+    color: var(--caption);
+  }
+}
+
+.button {
+  height: 56px;
+  width: 650px;
+
+  color: var(--text);
+  background: none;
+  font-size: 18px;
+
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, var(--primary), var(--gray)) 1;
+
+  margin-top: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  >svg {
+    font-size: 24px;
+    margin-right: 7px;
+  }
+
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: var(--background-light);
   }
 }
 
 .user {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 
   margin-bottom: 64px;
 
@@ -28,22 +57,4 @@
     border-radius: 70px;
     margin-bottom: 16px;
   }
-}
-
-.signin-button {
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-
-  padding: 16px;
-  width: 650px;
-
-  background: none;
-  color: #FFF;
-  font-size: 18px;
-
-  border-width: 2px;
-  border-style: solid;
-  border-image: linear-gradient(to right, #00B37E, #F75A68) 1;
-
-  margin-top: 24px;
 }

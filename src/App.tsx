@@ -1,8 +1,9 @@
 import { SignIn } from './pages/SignIn';
-import './global.scss';
+
+import './styles/global.scss';
 
 export default function App() {
   return (
     <SignIn />
-  )
+  );
 }

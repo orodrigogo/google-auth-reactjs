@@ -1,8 +1,10 @@
-import { auth } from '../../services/firebase';
+import { useState } from 'react';
+import { GoogleLogo } from "phosphor-react";
+
 import { signInWithPopup, GoogleAuthProvider, User } from "firebase/auth";
+import { auth } from '../../services/firebase';
 
 import './styles.scss';
-import { useState } from 'react';
 
 export function SignIn() {
   const [user, setUser] = useState<User>({} as User);
@@ -32,12 +34,13 @@ export function SignIn() {
 
       <h1>Acesse sua conta</h1>
 
-      <p>
+      <span>
         Utilizando autenticação social, por exemplo, autenticação com a Google você <br />
         facilita a vida do usuário permitindo utilizar a aplicação sem fazer cadastrado.
-      </p>
+      </span>
 
-      <button type="button" onClick={signInWithGoogle} className="signin-button">
+      <button type="button" onClick={signInWithGoogle} className="button">
+        <GoogleLogo />
         SignIn with Google
       </button>
     </div>
